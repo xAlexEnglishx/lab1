@@ -8,14 +8,22 @@ public class Lab1GuessingGame {
 		
 		Random rand = new Random();
 	    int randomNum = rand.nextInt(10) + 1;
+	    
+	    boolean on = true;
 		
 		System.out.print("What number am I thinking of between 1 and 10?\n");
-		int userGuess = input.nextInt();
 		
-		if(userGuess == randomNum){
-			System.out.println("You guessed it!");
-		}else{
-			System.out.println("Wrong! The answer is " + randomNum);
+		
+		while(on == true){
+			int userGuess = input.nextInt();
+			if(userGuess == randomNum){
+				System.out.println("You guessed it! The answer is " + randomNum);
+				on = false;
+			}else if(userGuess > randomNum){
+				System.out.println("Nope it is lower!");
+			}else if(userGuess < randomNum){
+				System.out.println("Nope it is higher!");
+			}
 		}
 	}
 }
