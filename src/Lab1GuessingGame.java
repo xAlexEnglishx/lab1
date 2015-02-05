@@ -27,3 +27,5 @@ public class Lab1GuessingGame {
 		}
 	}
 }
+
+//Hans was here
